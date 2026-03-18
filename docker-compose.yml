@@ -18,7 +18,6 @@ services:
              python manage.py collectstatic --noinput &&
              gunicorn cinema_service.wsgi:application --bind 0.0.0.0:8000"
     volumes:
-      - .:/app
       - static_volume:/app/static
       - media_volume:/app/media
     ports:
